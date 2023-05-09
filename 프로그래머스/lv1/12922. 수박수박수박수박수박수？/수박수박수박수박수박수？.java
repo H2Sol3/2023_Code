@@ -1,14 +1,17 @@
 class Solution {
     public String solution(int n) {
         String answer = "";
-        for(int i=0;i<n;i++){
-            if(i%2==0){
-                answer += "수";    
-            }else{
-                answer += "박";
-            }
-            
-        }
+        char s = '수';
+        char b = '박';
+        
+      for(int i=1;i<=n;i++){
+          if(i%2 == 1){
+              answer += s;
+          }else{
+              answer+= b;
+          }
+      }
+        
         return answer;
     }
 }
