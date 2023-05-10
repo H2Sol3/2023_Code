@@ -1,39 +1,25 @@
 class Solution {
     public boolean solution(String s) {
         boolean answer = true;
+        int num = 0;
+        int c = 0;
         
-        if(s.length()==4||s.length()==6){
-        for(int i=0;i<s.length();i++){
-            if(s.charAt(i)=='0'){
+        if(s.length() != 4 && s.length() != 6){
+            return false;
+        }else{
+            for(int i =0;i<s.length();i++){
+                if(s.charAt(i) - 48 <= 9){
+                    num++;
+                }else c++;
+            }
+            if(s.length() == num){
                 answer = true;
-            }else if(s.charAt(i)=='1'){
-                answer = true;
-            }else if(s.charAt(i)=='2'){
-                answer = true;
-            }else if(s.charAt(i)=='3'){
-                answer = true;
-            }else if(s.charAt(i)=='4'){
-                answer = true;
-            }else if(s.charAt(i)=='5'){
-                answer = true;
-            }else if(s.charAt(i)=='6'){
-                answer = true;
-            }else if(s.charAt(i)=='7'){
-                answer = true;
-            }else if(s.charAt(i)=='8'){
-                answer = true;
-            }else if(s.charAt(i)=='9'){
+            }else if(s.length() == c){
                 answer = true;
             }else{
                 answer = false;
-                return answer;
             }
+            return answer;
         }
-        
-        }else{
-            answer = false;
-                return answer;
-        }
-        return answer;
     }
 }
