@@ -1,18 +1,14 @@
 class Solution {
     public boolean solution(int x) {
         boolean answer = true;
+        int num = 0;
         String s = String.valueOf(x);
-        int sum = 0;
         for(int i=0;i<s.length();i++){
-            sum+=s.charAt(i)-48;
+            num += s.charAt(i)-48;
         }
-        if(x%sum == 0){
+        if(x%num == 0){
             answer = true;
-        }else{
-            answer = false;
-        }
-        
-        
+        }else answer = false;
         return answer;
     }
 }
