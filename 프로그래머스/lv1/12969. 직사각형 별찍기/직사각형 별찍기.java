@@ -6,13 +6,13 @@ class Solution {
         int a = sc.nextInt();
         int b = sc.nextInt();
         char star = '*';
-        for(int i = 1; i<= b; i++){
-            for(int j=1; j<=a;j++){
+        
+        for(int i=1;i<=b;i++){
+            for(int j=1;j<=a;j++){
                 System.out.print(star);
             }
             System.out.println();
         }
 
-        
     }
 }
