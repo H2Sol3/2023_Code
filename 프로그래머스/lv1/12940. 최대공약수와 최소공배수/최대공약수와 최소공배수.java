@@ -12,12 +12,12 @@ class Solution {
         answer[0] = m;
         
         //최소공배수
-        while(m != 0){
+  /*      while(m != 0){
             int tmp2 = n % m;
             n = m;
             m = tmp2;
-        }
-        answer[1] = mul / n;
+        } */
+        answer[1] = mul / answer[0];
         return answer;
     }
 }
