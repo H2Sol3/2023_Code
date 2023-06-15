@@ -1,9 +1,11 @@
 class Solution {
     public String solution(String cipher, int code) {
         String answer = "";
-        char[] c = cipher.toCharArray();
-        for(int i=code-1;i<c.length;i+=code){
-            answer += c[i];
+        for(int i=0;i<cipher.length();i++){
+            if(i%code-1 == 0){
+                answer += cipher.charAt(i);
+                System.out.println(i);
+            }
         }
         return answer;
     }
