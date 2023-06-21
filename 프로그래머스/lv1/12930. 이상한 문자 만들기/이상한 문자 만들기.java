@@ -2,25 +2,24 @@ import java.util.*;
 class Solution {
     public String solution(String s) {
         String answer = "";
-         s = s.toLowerCase();
+        String[] str = s.split(" ",-1);
         
-        String[] str = s.split("");
-        
-        int key = 0;
-        
-        for(int i=0; i<str.length; i++) {
-            if(key % 2 == 0) {
-                str[i] = str[i].toUpperCase();
+        System.out.println(Arrays.toString(str)); 
+        for(int i=0;i<str.length;i++){
+            for(int j=0;j<str[i].length();j++){
+                if(j%2==0){
+                    answer += str[i].toUpperCase().charAt(j);
+                }else{
+                    answer += str[i].toLowerCase().charAt(j);
+                }
             }
-
-            if(str[i].isBlank()) {
-                key = -1;
+            
+            if(i != str.length-1){
+                answer+=" ";
             }
-            answer += str[i];
-            key++;
+            
         }
-        
-        
+               
         return answer;
     }
 }
