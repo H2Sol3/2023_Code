@@ -1,19 +1,19 @@
 import java.util.*;
-public class Main{
-    public static void main(String[] args){
+
+public class Main {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         int n = scan.nextInt();
         int k = scan.nextInt();
-        
-        ArrayList<Integer> arr = new ArrayList<Integer>();
-        
+        int[] arr = new int[n];
         for(int i=0;i<n;i++){
-            int num = scan.nextInt();
-            arr.add(num);
+            arr[i] = scan.nextInt();;
         }
-        Collections.sort(arr);
-        Collections.reverse(arr);
+        Arrays.sort(arr);
 
-        System.out.println(arr.get(k-1));
+        System.out.println(arr[arr.length-k]);
+
     }
+
 }
