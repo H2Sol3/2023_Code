@@ -25,7 +25,7 @@ public class Main {
             }
             
             double winner = (double)cnt/n * 100;
-            System.out.printf("%.3f%%\n",winner,"%");
+            System.out.printf("%.3f%%\n",winner);
         }
     }
 }
