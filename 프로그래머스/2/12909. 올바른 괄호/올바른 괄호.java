@@ -3,14 +3,14 @@ import java.util.*;
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
-        Stack<Character> stack = new Stack<>();
+        Stack<String> stack = new Stack<>();
         
         if(s.charAt(0) == ')'){
             answer = false;
         }else{
             for(int i=0;i<s.length();i++){
                 if(s.charAt(i) == '('){
-                    stack.push('(');
+                    stack.push("(");
                 }else{
                     if(stack.size() == 0){
                         answer = false;
@@ -21,7 +21,6 @@ class Solution {
                 }
             }
         }
-        
         
         if(stack.size() != 0){
             answer = false;
