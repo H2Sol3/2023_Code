@@ -1,5 +1,4 @@
 import java.util.*;
-
 class Solution {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
@@ -7,17 +6,17 @@ class Solution {
         
         //선수 넣기
         for(String person : participant){
-            map.put(person, map.getOrDefault(person, 0) + 1);//없으면0
+            map.put(person, map.getOrDefault(person,0) + 1);
         }
         
-        //완주한 사람들 제외
-        for(String person: completion){
-            map.put(person,map.get(person)-1);
+        //완주 선수 빼기
+        for(String person : completion){
+            map.put(person, map.get(person) - 1);
         }
         
-        for(String person : map.keySet()){
-            if(map.get(person) > 0){
-                answer = person;
+        for(String key : map.keySet()){
+            if(map.get(key) > 0){
+                answer = key;
             }
         }
         
