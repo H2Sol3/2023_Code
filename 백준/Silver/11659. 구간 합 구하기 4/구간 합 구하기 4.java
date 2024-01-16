@@ -4,29 +4,33 @@ public class Main{
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int m = scan.nextInt();
+        
         int[] arr = new int[n];
         int[] sum = new int[n];
-        //숫자 입력받기
+        
         for(int i=0;i<arr.length;i++){
             arr[i] = scan.nextInt();
-            if (i == 0) {
+            
+            if(i>0) {
+                sum[i] = sum[i-1] + arr[i];
+            }else{
                 sum[i] = arr[i];
-            } else {
-                sum[i] = sum[i - 1] + arr[i];
             }
         }
-        //i, j 입력받기
-       for(int k=0;k<m;k++){
-            int i = scan.nextInt()-1;
-            int j = scan.nextInt()-1;
+        
+        for(int k=0;k<m;k++){
+            int i = scan.nextInt();
+            int j = scan.nextInt();
             
-            if(i==0){
-                System.out.println(sum[j]);
+            if(i == 1){
+                System.out.println(sum[j-1]);
+            }else if(i == j){
+                System.out.println(arr[j-1]);
             }else{
-                System.out.println(sum[j] - sum[i-1]);
+                System.out.println(sum[j-1]-sum[i-2]);
             }
-            
-       } 
+        }
         
     }
+    
 }
