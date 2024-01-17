@@ -1,10 +1,6 @@
 import java.util.*;
 class Solution
 {
-    public static void main(String[] args){
-        solution("baabaa");
-        solution("cdcd");
-    }
     public static int solution(String s)
     {
         int answer = 0;
