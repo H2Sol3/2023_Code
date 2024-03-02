@@ -1,13 +1,11 @@
 class Solution {
     public String solution(String phone_number) {
-        String answer = "";
-        int length = phone_number.length() - 4;
-        
-        for(int i=0;i<length;i++){
-            answer+="*";
+        String answer = phone_number.substring(phone_number.length()-4,phone_number.length());
+        String star = "";
+        for(int i=0;i<phone_number.length()-4;i++){
+            star+="*";
         }
-        
-        answer += phone_number.substring(phone_number.length()-4);
+        answer = star+answer;
         return answer;
     }
 }
