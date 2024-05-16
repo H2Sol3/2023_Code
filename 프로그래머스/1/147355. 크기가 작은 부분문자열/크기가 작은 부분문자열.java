@@ -8,9 +8,7 @@ class Solution {
             long strInt = Long.parseLong(str);
             long pInt = Long.parseLong(p);
             
-            if(strInt <= pInt){
-                answer++;
-            }
+            if(strInt <= pInt) answer++;
         }
         return answer;
     }
