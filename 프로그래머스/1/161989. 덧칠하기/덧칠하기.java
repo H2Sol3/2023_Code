@@ -1,7 +1,8 @@
 class Solution {    
     public int solution(int n, int m, int[] section) {        
         int answer = 0;                
-        int start = section[0];        
+        int start = section[0];    
+        
         answer++;               
         
         for (int item : section) {            
@@ -14,5 +15,6 @@ class Solution {
         }                
         
         return answer;    
+        
     }
 }
