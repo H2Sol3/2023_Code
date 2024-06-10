@@ -14,6 +14,7 @@ class Solution {
             map.put(person, map.get(person) - 1);
         }
         
+        //확인하기
         for(String key : map.keySet()){
             if(map.get(key) > 0){
                 answer = key;
