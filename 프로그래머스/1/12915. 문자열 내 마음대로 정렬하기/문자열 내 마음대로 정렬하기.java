@@ -16,6 +16,7 @@ class Solution {
             String str = list.get(i).substring(1);
             list.set(i, str);
         }
+        
         return list.toArray(new String[0]);
     }
 }
