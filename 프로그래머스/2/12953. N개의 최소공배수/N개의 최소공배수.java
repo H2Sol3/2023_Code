@@ -12,11 +12,8 @@ class Solution {
                 a = b;
                 b = temp;
             }
-
             answer = (answer * arr[i]) / a;
         }
-        
-        
         return answer;
     }
 }
